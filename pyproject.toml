@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "netinfo"
+version = "0.1.0"
+description = "A CLI tool to display system network information"
+authors = ["SystemProgrammerWizzard <tatandat110105@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "netinfo", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+psutil = "^5.9.8"
+pyinstaller = "^6.12.0"
+poetry = "^2.1.2"
+
+[tool.poetry.scripts]
+netinfo = "netinfo.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
